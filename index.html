@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Deadicated</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -267,6 +272,9 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .btn-seal::after{content:" →"}
 .lang{background:rgba(255,248,224,.7)}.lang button{color:#6a3a18}.lang button.on{background:#8a140c;color:#fff2d0}
 </style>
+</head>
+<body>
+
 
 <canvas id="stage" aria-label="Nhà có bàn thờ gia tiên"></canvas>
 <div id="ui">
@@ -1716,8 +1724,8 @@ function refreshHud(){const q=[];Object.keys(QDEF).forEach(id=>{const s=GS.qs[id
   const hq=$('#hQuest');if(!q.length)hq.innerHTML='';}
 /* static strings (called on language change) */
 function gameStatic(){$('#shClose').setAttribute('aria-label',L('Đóng','Close'));$('#btnRitDone').textContent=L('← Ra ngoài','← Step out');$('#btnJump').textContent='';
-  $('#vsEye').textContent=L('Bắt đầu','Begin');$('#vsTitle').textContent=L('Chọn góc nhìn','Choose your view');$('#vs3').textContent=L('GSóc nhìn thứ ba','Third person');$('#vs3d').textContent=L('Thấy nhân vật của bạn, tự chọn giới tính, quần áo, giày dép, nón và phụ kiện.','See your character and style it: gender, clothes, shoes, hats and accessories.');
-  $('#vs1').textContent=L('GSóc nhìn thứ nhất','First person');$('#vs1d').textContent=L('Nhìn bằng mắt của chính bạn, như đang thật sự đi trong làng.','Walk the village through your own eyes.');
+  $('#vsEye').textContent=L('Bắt đầu','Begin');$('#vsTitle').textContent=L('Chọn góc nhìn','Choose your view');$('#vs3').textContent=L('Góc nhìn thứ ba','Third person');$('#vs3d').textContent=L('Thấy nhân vật của bạn, tự chọn giới tính, quần áo, giày dép, nón và phụ kiện.','See your character and style it: gender, clothes, shoes, hats and accessories.');
+  $('#vs1').textContent=L('Góc nhìn thứ nhất','First person');$('#vs1d').textContent=L('Nhìn bằng mắt của chính bạn, như đang thật sự đi trong làng.','Walk the village through your own eyes.');
   $('#mnTitle').textContent=L('Tùy chọn','Options');$('#mnView').textContent=L('Đổi góc nhìn','Switch view');$('#mnOutfit').textContent=L('Đổi trang phục','Change outfit');$('#mnReset').textContent=L('Chơi lại từ đầu','Start over');$('#mnClose').textContent=L('Tiếp tục','Resume');
   $('#fiQuit').textContent=L('Thôi','Stop');$('#crEye').textContent=L('Nhân vật','Character');$('#crTitle').textContent=L('Bạn trông thế nào?','Who are you?');$('#crRand').textContent=L('Ngẫu nhiên','Random');$('#crDone').textContent=L('Xong, về làng','Done');hudDirty=true;if(!$('#creator').hidden)renderCreator();}
 
@@ -3054,3 +3062,6 @@ if(location.hash==='#debug')window.__hv={g:GAMEDBG,start:skipIntro,burn:()=>$('#
 requestAnimationFrame(loop);
 })();
 </script>
+
+</body>
+</html>
