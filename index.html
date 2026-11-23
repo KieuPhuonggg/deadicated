@@ -1855,7 +1855,7 @@ function walkTick(dt,tm){
     if(inAttic(PL.x,PL.z)){yawBase=Math.PI;yawOff=0;cx=clamp(PL.x,-3.2,3.2);cz=clamp(PL.z+2.6,-28.4,-18.2);cy=PL.y+5.6;}
     else if(inGarden(PL.x,PL.z)){cx=clamp(cx,-14.3,-4.2);cz=clamp(cz,-15.6,-9.3);cy=Math.min(cy,4.6);}
     else if(inAnnex(PL.x,PL.z)){yawBase=0;yawOff=0;cx=PL.x;cz=Math.max(PL.z-2.4,-9.3);cy=5.8;}
-    else if(inside){cx=clamp(cx,-3.2,3.2);cz=clamp(cz,-6.6,2.6);cy=Math.min(cy,4.6);}
+    else if(inside){cx=clamp(cx,-3.2,3.2);cz=clamp(cz,-6.6,.7);cy=Math.min(cy,2.7);}
     else if(rm){const l=houseLoc(rm,cx,cz);const lx=clamp(l[0],-rm.w/2+.4,rm.w/2-.4),lz=clamp(l[1],-rm.d+.4,-.35),w2=houseWorld(rm,lx,lz);cx=w2[0];cz=w2[1];cy=Math.min(cy,rm.F+3.0);}
     else if(cz<1.0){const k=(tz-1.0)/Math.max(.01,tz-cz);cx=tx+(cx-tx)*k;cz=1.0;cy=ty+sp*dist*.8;}
     if(!tight&&!BOATON){const r=camAvoid(tx,tz,cx,cz),tg=r[2];CAMK+=(tg-CAMK)*Math.min(1,dt*(tg<CAMK?9:1.4));const kx=cx-tx,kz=cz-tz;cx=tx+kx*CAMK;cz=tz+kz*CAMK;cy=ty+(cy-ty)*CAMK;}else CAMK=1;
